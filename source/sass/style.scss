@@ -25,7 +25,6 @@ Atomic design is philosophically complimentary with these CSS approaches:
 So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 */
-
 /*------------------------------------*\
     $TABLE OF CONTENTS 
     based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
@@ -52,17 +51,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
-
-
-
 @import "generic/variables";
 @import "generic/mixins";
 @import "generic/reset";
-
-
-
-
-
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
@@ -76,17 +67,10 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "base/forms";
 @import "base/tables";
 @import "base/animation";
-
-
-
-
-
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
 @import "objects/layout";
-
-
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
@@ -94,15 +78,10 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "objects/nav";
 @import "objects/main";
 @import "objects/footer";
-
-
-
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
 @import "objects/text";
-
-
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
