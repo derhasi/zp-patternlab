@@ -16,3 +16,13 @@ nbproject
 # Tools
 .svn
 .sass-cache
+
+# Patternlab specific (we override patternlabs gitignore, to have better control)
+/patternlab-php/.gitignore
+/patternlab-php/public/*
+/patternlab-php/source/*
+config.ini
+latest-change.txt
+*-ck.js
+# We allow the readme, so our public folder is available and will not fail the builder.php
+!/patternlab-php/public/README.md
