@@ -1,0 +1,28 @@
+<div class="event event-teaser-past" itemscope itemtype="http://schema.org/Event">
+  <a class="event-link" itemprop="url" href="{{event.url}}" title="{{event.title}}">
+
+    <!-- The event club logo is the logo of the event itself -->
+    <span class="event-name" itemprop="name">{{event.title}}</span>
+    <img class="event-logo" itemprop="image" src="{{event.club.logo}}">
+
+    <div class="event-meta">
+      <div class="event-date" itemprop="startDate" content="{{event.date.iso}}">{{event.date.ago}}</div>
+      <div class="event-club" itemprop="performer" itemscope itemtype="http://schema.org/SportsTeam">
+        <span itemprop="name">{{event.club.name}}</span>
+      </div>
+    </div>
+    <div class="event-details">
+      <span class="event-attendee-count">{{event.attendees.count}} Attendees</span>
+    </div>
+  </a>
+  <div class="event-results">
+    <ul class="event-result-list">
+      <li><a href="#">K1</a></li>
+      <li><a href="#">K2</a></li>
+      <li><a href="#">K3</a></li>
+      <li><a href="#">K4</a></li>
+      <li><a href="#">K5</a></li>
+      <li><a href="#">M</a></li>
+    </ul>
+  </div>
+</div>

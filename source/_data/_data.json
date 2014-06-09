@@ -96,7 +96,8 @@
       "plain": "19.05.2014",
       "iso": "2014-05-19T08:00",
       "monthday": "19.05.",
-      "year": "2014"
+      "year": "2014",
+      "ago": "5 days ago"
     },
     "url": "#",
     "type": {
@@ -105,6 +106,9 @@
     "club": {
       "name": "MSC Lechbruck",
       "logo": "../../images/fpo_square.png"
+    },
+    "attendees": {
+      "count": 121
     }
   }
 }
