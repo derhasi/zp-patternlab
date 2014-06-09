@@ -1,27 +1,15 @@
-<div >
-  <span class="event-club">{{event.club.name}}</span>
-  <span class="event-type">{{event.type.name}}</span>
-
-</div>
-
 <div class="event event-teaser" itemscope itemtype="http://schema.org/Event">
-  <a itemprop="url" href="{{event.url}}">
-    <span itemprop="name"> {{event.title}}</span>
-  </a>
-  <div class="event-date" itemprop="startDate" content="{{event.date.iso}}">{{event.date.plain}}</div>
+  <a class="event-link" itemprop="url" href="{{event.url}}" title="{{event.title}}">
 
-  <div itemprop="performer" itemscope itemtype="http://schema.org/SportsTeam">
-    <span itemprop="name">{{event.club.name}}</span>
-    <img class="event-club-logo" itemprop="image" src="{{event.club.logo}}">
-  </div>
+    <!-- The event club logo is the logo of the event itself -->
+      <span class="event-name" itemprop="name">{{event.title}}</span>
+      <img class="event-logo" itemprop="image" src="{{event.club.logo}}">
 
-  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-    <a itemprop="url" href="wells-fargo-center.html">
-      Wells Fargo Center
-    </a>
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="addressLocality">Philadelphia</span>,
-      <span itemprop="addressRegion">PA</span>
+    <div class="event-meta">
+      <div class="event-date" itemprop="startDate" content="{{event.date.iso}}">{{event.date.plain}}</div>
+      <div class="event-club" itemprop="performer" itemscope itemtype="http://schema.org/SportsTeam">
+        <span itemprop="name">{{event.club.name}}</span>
+      </div>
     </div>
-  </div>
+  </a>
 </div>

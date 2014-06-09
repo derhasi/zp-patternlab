@@ -1,0 +1,36 @@
+
+.event-teaser {
+  position: relative;
+  display: block;
+  // @todo: replace with fluid?
+  height: 240px;
+  width: 320px;
+  background: lightseagreen;
+
+  .event-logo {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+
+    position: absolute;
+    height: 240px;
+    left: -20%;
+    top: -20%;
+    z-index: 0;
+  }
+
+  .event-meta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    text-align: right;
+  }
+
+  &:hover {
+    .event-logo {
+      left: 0;
+      top: 0;
+    }
+  }
+
+}
