@@ -1,11 +1,19 @@
 
 .event-teaser {
   position: relative;
+  overflow: hidden;
   display: block;
   // @todo: replace with fluid?
   height: 240px;
   width: 320px;
   background: lightseagreen;
+
+  // The link spans the whole area.
+  .event-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 
   .event-logo {
     transition: all 0.5s ease;
@@ -30,6 +38,74 @@
     .event-logo {
       left: 0;
       top: 0;
+    }
+  }
+
+}
+
+.event-teaser-small {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 60px;
+  width: 160px;
+  background: lightcoral;
+
+  // The link spans the whole area.
+  .event-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  // On the small teaser, we hide the long title.
+  .event-name {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .event-logo {
+    height: 60px;
+    float: left;
+    transition: all 0.5s ease;
+
+  }
+
+  .event-date {
+    float: left;
+    white-space: nowrap;
+    line-height: 60px;
+    font-size: 32px;
+    width: 100px;
+
+    transition: all 0.5s ease;
+  }
+  .event-date-monthday {
+  }
+  .event-date-year {
+    opacity: 0;
+  }
+  .event-club {
+    width: 160px;
+    line-height: 30px;
+    font-size: 18px;
+    white-space: nowrap;
+    clear: both;
+  }
+
+  &:hover {
+    .event-logo {
+      height: 30px;
+    }
+    .event-date {
+      line-height: 30px;
+      font-size: 18px;
+    }
+    .event-date-year {
+      transition: opacity 0.5s ease;
+      opacity: 1;
     }
   }
 

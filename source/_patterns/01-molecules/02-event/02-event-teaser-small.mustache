@@ -1,0 +1,12 @@
+<div class="event event-teaser-small" itemscope itemtype="http://schema.org/Event">
+  <a class="event-link" itemprop="url" href="{{event.url}}" title="{{event.title}}">
+    <span class="event-name" itemprop="name">{{event.title}}</span>
+    <img class="event-logo" itemprop="image" src="{{event.club.logo}}">
+    <div class="event-date" itemprop="startDate" content="{{event.date.iso}}">
+      <span class="event-date-monthday">{{event.date.monthday}}</span><span class="event-date-year">{{event.date.year}}</span>
+    </div>
+    <div class="event-club" itemprop="performer" itemscope itemtype="http://schema.org/SportsTeam">
+      <span itemprop="name">{{event.club.name}}</span>
+    </div>
+  </a>
+</div>

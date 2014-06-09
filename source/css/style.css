@@ -1390,10 +1390,16 @@ td {
 
 .event-teaser {
   position: relative;
+  overflow: hidden;
   display: block;
   height: 240px;
   width: 320px;
   background: lightseagreen;
+}
+.event-teaser .event-link {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 .event-teaser .event-logo {
   transition: all 0.5s ease;
@@ -1414,4 +1420,58 @@ td {
 .event-teaser:hover .event-logo {
   left: 0;
   top: 0;
+}
+
+.event-teaser-small {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 60px;
+  width: 160px;
+  background: lightcoral;
+}
+.event-teaser-small .event-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.event-teaser-small .event-name {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.event-teaser-small .event-logo {
+  height: 60px;
+  float: left;
+  transition: all 0.5s ease;
+}
+.event-teaser-small .event-date {
+  float: left;
+  white-space: nowrap;
+  line-height: 60px;
+  font-size: 32px;
+  width: 100px;
+  transition: all 0.5s ease;
+}
+.event-teaser-small .event-date-year {
+  opacity: 0;
+}
+.event-teaser-small .event-club {
+  width: 160px;
+  line-height: 30px;
+  font-size: 18px;
+  white-space: nowrap;
+  clear: both;
+}
+.event-teaser-small:hover .event-logo {
+  height: 30px;
+}
+.event-teaser-small:hover .event-date {
+  line-height: 30px;
+  font-size: 18px;
+}
+.event-teaser-small:hover .event-date-year {
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
