@@ -1,4 +1,8 @@
-# Require any additional compass plugins here.
+# Require any additional compass plugins installed on your system.
+require 'compass-normalize'
+require 'rgbapng'
+require 'toolkit'
+require 'sass-globbing'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -15,7 +19,6 @@ output_style = :expanded
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
-
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
