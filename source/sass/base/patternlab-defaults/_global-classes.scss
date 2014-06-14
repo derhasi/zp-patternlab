@@ -16,23 +16,6 @@
   clear: both;
 }
 
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
 /* Floats */
 .right {
   float: right;
@@ -62,24 +45,6 @@
   text-align: left;
 }
 
-/* Display Classes */
-.hide-small {
-  @media all and (max-width: $bp-med) {
-    display: none;
-  }
-}
-
-.hide-med {
-  @media all and (min-width: $bp-med) and (max-width: $bp-large) {
-    display: none;
-  }
-}
-
-.hide-large {
-  @media all and (min-width: $bp-large) {
-    display: none;
-  }
-}
 
 //States
 .valid {
@@ -96,10 +61,6 @@
 
 .information {
   color: $information;
-}
-
-.font-secondary {
-  font-family: $font-secondary;
 }
 
 

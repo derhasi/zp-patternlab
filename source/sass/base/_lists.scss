@@ -1,0 +1,41 @@
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Definition Lists */
+dl {
+  overflow: hidden;
+  margin: 0 0 $space;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+//Passages of text
+.text {
+
+  ul {
+    list-style: disc;
+    margin: 0 0 $space 1.2em;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    margin: 0 0 $space 1.5em;
+
+    ol {
+      margin-bottom: 0;
+    }
+  }
+}

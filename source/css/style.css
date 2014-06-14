@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600);
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -15,25 +16,6 @@ html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, 
 
 header, footer, nav, section, article, hgroup, figure {
   display: block;
-}
-
-.animate-fade {
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-.animate-fade:hover {
-  opacity: 0;
-}
-
-.animate-move > .demo-shape {
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
 }
 
 /*------------------------------------*\
@@ -141,110 +123,6 @@ input[type="search"]::-webkit-search-decoration {
   color: gray;
 }
 
-/*------------------------------------*\
-    $GLOBAL CLASSES
-\*------------------------------------*/
-/* Clearfix */
-.cf, .l-two-col, [role=main] {
-  *zoom: 1;
-}
-
-.cf:before, .l-two-col:before, [role=main]:before, .cf:after, .l-two-col:after, [role=main]:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after, .l-two-col:after, [role=main]:after {
-  clear: both;
-}
-
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Floats */
-.right {
-  float: right;
-  padding: 0 0 1em 1em;
-}
-
-.right-search {
-  float: right;
-  padding: 0 0 1em 0;
-}
-
-.left {
-  float: left;
-  padding: 0 1em 1em 0;
-}
-
-/* Text-Align */
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
-
-/* Display Classes */
-@media all and (max-width: 46.8em) {
-  .hide-small {
-    display: none;
-  }
-}
-
-@media all and (min-width: 46.8em) and (max-width: 50em) {
-  .hide-med {
-    display: none;
-  }
-}
-
-@media all and (min-width: 50em) {
-  .hide-large {
-    display: none;
-  }
-}
-
-.valid {
-  color: #089e00;
-}
-
-.error {
-  color: red;
-}
-
-.warning {
-  color: #fff664;
-}
-
-.information {
-  color: #000db5;
-}
-
-.font-secondary {
-  font-family: Georgia, Times, "Times New Roman", serif;
-}
-
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1, .alpha {
@@ -261,7 +139,7 @@ h3, .gamma {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: normal;
 }
 
@@ -273,6 +151,10 @@ a {
 }
 a:hover, a:focus {
   color: gray;
+}
+
+.text a {
+  text-decoration: underline;
 }
 
 ol, ul {
@@ -295,9 +177,24 @@ dd {
   margin-left: 0;
 }
 
+.text ul {
+  list-style: disc;
+  margin: 0 0 1em 1.2em;
+}
+.text ul ul {
+  margin-bottom: 0;
+}
+.text ol {
+  list-style: decimal;
+  margin: 0 0 1em 1.5em;
+}
+.text ol ol {
+  margin-bottom: 0;
+}
+
 body {
   background: white;
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.5 "Titillium Web", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #333333;
 }
@@ -372,6 +269,129 @@ hr {
 abbr {
   border-bottom: 1px dotted gray;
   cursor: help;
+}
+
+.font-secondary {
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* Completely remove from the flow and screen readers. */
+.base-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.base-invisible {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Display Classes */
+@media all and (max-width: 46.8em) {
+  .base-hidden--small {
+    display: none;
+  }
+}
+
+@media all and (min-width: 46.8em) and (max-width: 50em) {
+  .base-hidden--med {
+    display: none;
+  }
+}
+
+@media all and (min-width: 50em) {
+  .base--hidden--large {
+    display: none;
+  }
+}
+
+.animate-fade {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.animate-fade:hover {
+  opacity: 0;
+}
+
+.animate-move > .demo-shape {
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+/*------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------*/
+/* Clearfix */
+.cf, .l-two-col, [role=main] {
+  *zoom: 1;
+}
+
+.cf:before, .l-two-col:before, [role=main]:before, .cf:after, .l-two-col:after, [role=main]:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after, .l-two-col:after, [role=main]:after {
+  clear: both;
+}
+
+/* Floats */
+.right {
+  float: right;
+  padding: 0 0 1em 1em;
+}
+
+.right-search {
+  float: right;
+  padding: 0 0 1em 0;
+}
+
+.left {
+  float: left;
+  padding: 0 1em 1em 0;
+}
+
+/* Text-Align */
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.valid {
+  color: #089e00;
+}
+
+.error {
+  color: red;
+}
+
+.warning {
+  color: #fff664;
+}
+
+.information {
+  color: #000db5;
 }
 
 .event-teaser {
@@ -536,7 +556,7 @@ abbr {
 .acc-handle {
   background: #131313;
   color: white;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: bold;
   display: block;
   position: relative;
@@ -1426,30 +1446,12 @@ abbr {
 }
 
 .pullquote {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 1.4375em;
 }
 
 .caption {
   font-style: italic;
-}
-
-.text a {
-  text-decoration: underline;
-}
-.text ul {
-  list-style: disc;
-  margin: 0 0 1em 1.2em;
-}
-.text ul ul {
-  margin-bottom: 0;
-}
-.text ol {
-  list-style: decimal;
-  margin: 0 0 1em 1.5em;
-}
-.text ol ol {
-  margin-bottom: 0;
 }
 
 .tooltip-container {
